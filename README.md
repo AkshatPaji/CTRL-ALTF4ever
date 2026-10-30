@@ -37,7 +37,7 @@ Coming soon. The desktop is currently going through something.
 ### Requirements
 
 - Python 3
-- Pygame
+- Pygame-ce==2.5.8
 
 ### Get the code
 
