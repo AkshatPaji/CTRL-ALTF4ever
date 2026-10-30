@@ -42,7 +42,7 @@ Coming soon. The desktop is currently going through something.
 ### Get the code
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/CTRL-ALTF4EVER.git
+git clone https://github.com/AkshatPaji/CTRL-ALTF4EVER.git
 cd CTRL-ALTF4EVER
 ```
 
