@@ -1,6 +1,6 @@
 # CTRL+ALTF4EVER
 
-> too many windows. not enough patience. one very questionable desktop.
+*too many windows. not enough patience. one very questionable desktop.*
 
 Ever wanted to spend your free time closing random error windows? No? Well, you're doing it anyway.
 
@@ -14,17 +14,29 @@ This is my **first ever Pygame project**!
 
 I'm still learning Python game development, so this project is also me experimenting, figuring things out, breaking stuff, fixing it, and occasionally wondering why something worked in the first place.
 
-This v1.0 took roughly **9 hours** to put together. It's not perfect, but hey, it runs. That's a win.
+It's not perfect, but hey, it runs. That's a win.
 
-I'm planning to keep developing it slowly, adding one feature at a time. So expect more chaos in future updates.
+I'm developing it slowly, adding one feature at a time. Every update brings something new, and hopefully fewer bugs. Hopefully.
 
-## What's in v1.0?
+## What's new in v2.0?
+
+The game is getting a little makeover.
+
+- A redesigned boot screen with bigger text and a more prominent game logo.
+- An improved terminal section with actual instructions on how to play.
+- A developer message because apparently the developer has things to say.
+- A cleaner layout while keeping the dark, terminal-inspired aesthetic.
+- Updated version information.
+
+The actual gameplay mechanics are still the same. This update is mainly about making the first screen look less like a debugging session.
+
+## What's in the game?
 
 - A boot screen to start your questionable journey.
 - Random popup windows with developer-themed messages.
 - A score system for closing windows.
 - Increasing spawn speed as you close more popups.
-- Unlockable achievements.
+- Unlockable score-based achievements.
 - Random reactions because apparently the game has opinions.
 - A dark, terminal-inspired desktop aesthetic.
 
@@ -37,7 +49,7 @@ Coming soon. The desktop is currently going through something.
 ### Requirements
 
 - Python 3
-- Pygame-ce==2.5.8
+- Pygame-compatible environment
 
 ### Get the code
 
@@ -46,10 +58,17 @@ git clone https://github.com/AkshatPaji/CTRL-ALTF4EVER.git
 cd CTRL-ALTF4EVER
 ```
 
-### Install Pygame
+### Create a virtual environment (recommended)
 
 ```bash
-python -m pip install pygame
+python -m venv .venv
+source .venv/bin/activate
+```
+
+### Install dependencies
+
+```bash
+python -m pip install pygame-ce
 ```
 
 ### Run it
@@ -68,18 +87,19 @@ python3 main.py
 
 | Action | Control |
 |---|---|
-| Start | Click LETS GOO |
-| Close popup | Click X or OK |
-| Rage quit | ESC |
+| Start the game | Click `LETS GOO` |
+| Close a popup | Click `X` or `OK` |
+| Rage quit | `ESC` |
 
 ## What's next?
 
-This is only v1.0. I'm not trying to build everything at once. I'll be adding features individually, testing them, fixing bugs, and slowly making this thing better.
+I'm not trying to build everything at once. I'll be adding features individually, testing them, fixing bugs, and slowly making this thing better.
 
 Some ideas floating around:
 
-- Clickable desktop items with hidden easter eggs.
-- More popup types and behaviours.
+- Different types of popup windows.
+- Hidden clues and misleading messages.
+- More interesting popup behaviours.
 - New achievements and challenges.
 - More animations and visual effects.
 - Extra desktop interactions.
@@ -90,8 +110,8 @@ No promises on when these arrive. One feature, one commit, one questionable deci
 ## Built with
 
 - Python
-- Pygame
-- hours of questionable productivity
+- Pygame CE
+- A questionable amount of patience
 
 ## Final words
 
@@ -99,6 +119,6 @@ If you find a bug, congratulations. You've discovered a feature I haven't discov
 
 Thanks for checking out my first Pygame project!
 
-**CTRL+ALTF4EVER // v1.0**
+**CTRL+ALTF4EVER // v2.0**
 
-*please close responsibly.*# CTRL-AltF4ever
+*please close responsibly.*

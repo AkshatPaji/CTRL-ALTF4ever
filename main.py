@@ -305,7 +305,7 @@ def popup_click(pos):
 
             reactions = [
                 "W move. unfortunately there are more.",
-                "bro thinks its over 💀",
+                "bro thinks its over, lol 💀",
                 "one less problem. like 400 more.",
                 "closing windows is ur new personality",
                 "okay dev, calm down.",
