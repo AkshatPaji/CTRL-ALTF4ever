@@ -91,7 +91,7 @@ No promises on when these arrive. One feature, one commit, one questionable deci
 
 - Python
 - Pygame
-- 9 hours of questionable productivity
+- hours of questionable productivity
 
 ## Final words
 

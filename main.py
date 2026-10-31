@@ -2,6 +2,7 @@
 import pygame
 import random
 
+
 pygame.init()
 
 info = pygame.display.Info()
@@ -26,11 +27,20 @@ YELLOW = (255, 220, 100)
 WIN_BG = (215, 220, 214)
 WIN_TEXT = (25, 30, 25)
 
+
 font = pygame.font.SysFont("monospace", 17)
 small = pygame.font.SysFont("monospace", 13)
 tiny = pygame.font.SysFont("monospace", 11)
 title_font = pygame.font.SysFont("monospace", 21, bold=True)
 logo_font = pygame.font.SysFont("monospace", 16, bold=True)
+
+# Boot screen gets its own fonts. Gameplay doesn't need a typography makeover.
+boot_header = pygame.font.SysFont("monospace", 23, bold=True)
+boot_logo = pygame.font.SysFont("monospace", 22, bold=True)
+boot_terminal = pygame.font.SysFont("monospace", 16)
+boot_small = pygame.font.SysFont("monospace", 14)
+boot_title = pygame.font.SysFont("monospace", 19, bold=True)
+boot_dev = pygame.font.SysFont("monospace", 15)
 
 phase = "boot"
 popups = []
@@ -72,6 +82,7 @@ messages = [
     ("TOUCH GRASS", "grass.exe not installed", "try going outside manually"),
     ("IMPOSTER SYNDROME", "bro actually wrote this code", "character development??"),
 ]
+
 
 # tiny achievements because why not
 achievements = [
@@ -116,58 +127,98 @@ def boot_screen(mouse):
     w, h = screen.get_size()
     screen.fill(BLACK)
 
-    pygame.draw.rect(screen, PANEL, (0, 0, w, 42))
-    draw_text("CPAF // BOOT LOADER", 20, 11, GREEN, title_font)
-    draw_text("v0.1-dev-ish", w - 125, 14, GREY, tiny)
+    # top bar
+    pygame.draw.rect(screen, PANEL, (0, 0, w, 48))
+    draw_text("CPAF // BOOT LOADER", 20, 10, GREEN, boot_header)
+    draw_text("v2.0", w - 75, 17, GREY, boot_small)
 
-    # logo
-    logo_y = int(h * 0.10)
+    # the logo finally gets some screen real estate
+    logo_y = int(h * 0.09)
     for line in logo:
-        draw_text(line, int(w * 0.04), logo_y, GREEN, logo_font)
-        logo_y += 21
+        draw_text(line, int(w * 0.04), logo_y, GREEN, boot_logo)
+        logo_y += 27
 
     # terminal panel
     tx = int(w * 0.035)
-    ty = int(h * 0.44)
+    ty = int(h * 0.43)
     tw = int(w * 0.60)
-    th = int(h * 0.41)
+    th = int(h * 0.43)
+
 
     terminal = pygame.Rect(tx, ty, tw, th)
     pygame.draw.rect(screen, PANEL, terminal)
     pygame.draw.rect(screen, DARK_GREEN, terminal, 1)
 
-    draw_text("akshat@probably-not-a-hacker:~", tx + 15, ty + 12, WHITE, tiny)
+    draw_text("akshat@probably-not-a-hacker:~", tx + 17, ty + 13,
+              WHITE, boot_small)
+
     pygame.draw.line(
         screen, DARK_GREEN,
-        (tx + 15, ty + 34), (terminal.right - 15, ty + 34)
+        (tx + 17, ty + 40), (terminal.right - 17, ty + 40)
     )
 
-    y = ty + 49
-    for line, color in [
-        ("> booting up questionable decisions...", GREEN),
-        ("> checking if the code actually runs...", GREEN),
-        ("> confidence level: 100%", YELLOW),
-        ("> skill level: still loading...", RED),
-        ("> yeah we're probably fine_", WHITE),
-    ]:
-        draw_text(line, tx + 15, y, color, small)
-        y += 27
+    # actual instructions, because apparently people need those
+    draw_text("HOW TO PLAY", tx + 17, ty + 53, YELLOW, boot_title)
 
-    px = int(w * 0.70)
-    draw_text("YO.", px, int(h * 0.48), WHITE, title_font)
-    draw_text("you made this.", px, int(h * 0.55), GREY, small)
-    draw_text("you tell me if it works.", px, int(h * 0.59), GREY, tiny)
+    instructions = [
+        ("> pop-up windows will keep appearing.", GREEN),
+        ("> click the X or OK button to close one.", WHITE),
+        ("> every closed window gives you +1 point.", GREEN),
+        ("> close more windows to make them spawn faster.", YELLOW),
+        ("> collect achievements while you survive.", WHITE),
+        ("> press ESC if you have officially had enough.", RED),
+    ]
 
-    bw = int(w * 0.23)
+    y = ty + 88
+    for line, color in instructions:
+        draw_text(line, tx + 17, y, color, boot_terminal)
+        y += 29
+
+    # dev notes. blame this person if anything breaks.
+    px = int(w * 0.68)
+
+    draw_text("MESSAGE FROM THE DEV", px, int(h * 0.39),
+              GREEN, boot_small)
+
+    pygame.draw.line(
+        screen, DARK_GREEN,
+        (px, int(h * 0.43)),
+        (w - 22, int(h * 0.43))
+    )
+
+
+    draw_text("DEV.LOG", px, int(h * 0.46), YELLOW, boot_title)
+
+    dev_lines = [
+        "I don't know how many",
+        "windows I killed during",
+        "development, but it crashed",
+        "more than your kill count",
+        "today.",
+    ]
+
+    dev_y = int(h * 0.52)
+    for line in dev_lines:
+        draw_text(line, px, dev_y, WHITE, boot_dev)
+        dev_y += 22
+
+    draw_text("- akshat", px, dev_y + 5, GREEN, boot_small)
+    draw_text("// professional window", px, dev_y + 27, GREY, tiny)
+    draw_text("destroyer", px, dev_y + 41, GREY, tiny)
+
+    # PLAY button
+    bw = int(w * 0.25)
     bh = 54
     bx = min(px, w - bw - 15)
-    by = int(h * 0.70)
+    by = int(h * 0.79)
 
     start = pygame.Rect(bx, by, bw, bh)
     draw_button(start, "[ LETS GOO ]", mouse)
 
-    draw_text("WARNING: skill issue may occur", px, by + 70, RED, tiny)
+    draw_text("WARNING: skill issue may occur",
+              px, by + 65, RED, tiny)
 
+    # bottom status bar
     pygame.draw.rect(screen, PANEL, (0, h - 35, w, 35))
     pygame.draw.line(screen, DARK_GREEN, (0, h - 35), (w, h - 35))
     draw_text("STATUS: SOMEHOW RUNNING", 15, h - 24, GREEN, tiny)
@@ -289,12 +340,13 @@ def game_screen():
     draw_text("[???]", 48, 100, GREEN, title_font)
     draw_text("definitely_not_a_virus.exe", 48, 128, GREY, tiny)
 
+
     draw_text("[gift]", 48, 180, YELLOW, title_font)
     draw_text("motivation.zip", 48, 208, GREY, tiny)
 
     for p in popups:
         draw_popup(p)
-        
+
     if pygame.time.get_ticks() < notice_until:
         box = pygame.Rect(20, 53, min(w - 40, 480), 32)
         pygame.draw.rect(screen, PANEL, box)
@@ -340,6 +392,7 @@ while running:
     if phase == "boot":
         start_button = boot_screen(mouse)
 
+
     elif phase == "game":
         now = pygame.time.get_ticks()
 
@@ -355,4 +408,3 @@ while running:
     pygame.display.flip()
 
 pygame.quit()
- 
