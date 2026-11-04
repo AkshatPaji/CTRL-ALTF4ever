@@ -1,48 +1,78 @@
 # CTRL+ALTF4EVER
 
-*too many windows. not enough patience. one very questionable desktop.*
+*too many windows. not enough patience. somehow, it's getting worse.*
 
-Ever wanted to spend your free time closing random error windows? No? Well, you're doing it anyway.
+Ever wanted to spend your free time dealing with suspicious popup windows? Well, now you can make questionable decisions while doing exactly that.
 
-**CTRL+ALTF4EVER** is a tiny desktop chaos simulator made with Python and Pygame. Random popups keep showing up with increasingly ridiculous messages, and your job is to close them before things get completely out of hand.
+**CTRL+ALTF4EVER** is a tiny desktop chaos simulator made with Python and Pygame. Random windows keep appearing on your desktop, and not all of them are what they seem. Some are harmless notifications. Others are suspicious messages pretending to be something important.
 
-It's got fake errors, questionable warnings, developer humour, achievements, and a desktop that clearly needs professional help.
+Your job? Figure out which is which, click the right button, and try not to absolutely destroy your score.
+
+It's got fake errors, questionable offers, legitimate notifications, misleading warnings, achievements, and a desktop that is definitely not passing its security audit.
 
 ## A little about the project
 
 This is my **first ever Pygame project**!
 
-I'm still learning Python game development, so this project is also me experimenting, figuring things out, breaking stuff, fixing it, and occasionally wondering why something worked in the first place.
+I'm still learning Python game development, so this is basically my playground for experimenting with game mechanics, UI, animations, random events, and whatever else I feel like adding.
 
-It's not perfect, but hey, it runs. That's a win.
+I've broken things, fixed things, broken them again, and occasionally celebrated when the code worked without me understanding why.
 
-I'm developing it slowly, adding one feature at a time. Every update brings something new, and hopefully fewer bugs. Hopefully.
+It's not perfect. It's not supposed to be. It's a work in progress, and I'm building it one update at a time.
 
-## What's new in v2.0?
+## What's new in v3.0?
 
-The game is getting a little makeover.
+The popups have officially stopped being random boxes with random messages. Now they actually have personalities. Unfortunately.
 
-- A redesigned boot screen with bigger text and a more prominent game logo.
-- An improved terminal section with actual instructions on how to play.
-- A developer message because apparently the developer has things to say.
-- A cleaner layout while keeping the dark, terminal-inspired aesthetic.
-- Updated version information.
+- **GOOD and BAD popups:** Not every window is suspicious. Some are perfectly normal notifications, while others are definitely up to something.
+- **Two-button decisions:** Every popup comes with an `X` button and an `OK` button. Choose wisely.
+- **Consequences:** Clicking the wrong button affects your score. Closing a window doesn't automatically mean you made the right decision.
+- **More popup variety:** Different types of windows, messages, and situations keep things unpredictable.
+- **Updated scoring:** Good decisions earn points, while bad decisions can cost you.
+- **More desktop chaos:** Random popups keep appearing, so there's always something demanding your attention.
 
-The actual gameplay mechanics are still the same. This update is mainly about making the first screen look less like a debugging session.
+Basically, the game has gone from *close everything* to *maybe read before clicking*.
 
 ## What's in the game?
 
-- A boot screen to start your questionable journey.
-- Random popup windows with developer-themed messages.
-- A score system for closing windows.
-- Increasing spawn speed as you close more popups.
+- A boot screen to start your questionable desktop experience.
+- Random popup windows with different messages and appearances.
+- GOOD popups containing legitimate notifications.
+- BAD popups containing suspicious messages and questionable requests.
+- Separate `X` and `OK` buttons with different outcomes.
+- A score system that rewards good decisions and punishes bad ones.
+- Increasing popup spawn speed as the game progresses.
 - Unlockable score-based achievements.
-- Random reactions because apparently the game has opinions.
+- Random reactions and developer-themed messages.
 - A dark, terminal-inspired desktop aesthetic.
+
+## How to play
+
+Welcome to your desktop. It's a mess already. Let's make it worse.
+
+1. **Start the game:** Launch the game and click `LETS GOO` on the boot screen.
+2. **Watch for popups:** Windows will randomly appear on your desktop. Some are GOOD, and some are BAD.
+3. **Read before clicking:** Every popup has a message. Figure out whether it's legitimate or suspicious.
+4. **Choose your button:** Each popup has two options: `X` and `OK`. Your choice determines what happens to your score.
+5. **Keep your score positive:** Wrong decisions cost points. If your score drops below zero, it's game over.
+6. **Survive the chaos:** Popups keep appearing, and their spawn speed increases as you progress. Stay alert!
+
+### Scoring system
+
+| Popup type | Correct button | Points |
+|---|---|---:|
+| BAD | `X` | +5 |
+| BAD | `OK` | -10 |
+| GOOD | `OK` | +1 |
+| GOOD | `X` | -2 |
+
+**Remember:** Closing a popup isn't always the right decision. Sometimes the `OK` button is your friend. Sometimes it's absolutely not.
+
+*Read carefully. Click wisely. Blame the developer when things go wrong.*
 
 ## Screenshots
 
-Coming soon. The desktop is currently going through something.
+Coming soon. The desktop is currently dealing with multiple incidents.
 
 ## Installation
 
@@ -93,11 +123,11 @@ python3 main.py
 
 ## What's next?
 
-I'm not trying to build everything at once. I'll be adding features individually, testing them, fixing bugs, and slowly making this thing better.
+There's still plenty of room for more chaos.
 
 Some ideas floating around:
 
-- Different types of popup windows.
+- More popup categories and behaviours.
 - Hidden clues and misleading messages.
 - More interesting popup behaviours.
 - New achievements and challenges.
@@ -105,20 +135,23 @@ Some ideas floating around:
 - Extra desktop interactions.
 - Even more questionable messages.
 
-No promises on when these arrive. One feature, one commit, one questionable decision at a time.
+No promises on when these arrive. I'm still figuring things out, one feature, one commit, and one questionable decision at a time.
 
 ## Built with
 
 - Python
 - Pygame CE
 - A questionable amount of patience
+- Several windows that should probably have stayed closed
 
 ## Final words
 
-If you find a bug, congratulations. You've discovered a feature I haven't discovered yet.
+Read the popup. Think about your decision. Click responsibly.
 
-Thanks for checking out my first Pygame project!
+Or don't. It's your score.
 
-**CTRL+ALTF4EVER // v2.0**
+Thanks for checking out my first Pygame project and following its progress!
 
-*please close responsibly.*
+**CTRL+ALTF4EVER // v3.0**
+
+*please close responsibly. consequences may apply.*
