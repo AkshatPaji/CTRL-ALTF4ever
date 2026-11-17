@@ -15,7 +15,7 @@ info = pygame.display.Info()
 SW, SH = info.current_w, info.current_h
 # One SDL window, one size, for the whole session.
 # Hyprland can get into a resize-feedback loop if Pygame recreates the
-# display surface every time the compositor sends VIDEORESIZE.
+# display surface every time the compositor sends VIDEORESIZE. (i used ai to conveert pygame to exe. and some of these comments got added thru that process. i have no idea what hyprland is.)
 GAME_SIZE = (min(SW, max(760, int(SW * 0.85))), min(SH, max(560, int(SH * 0.85))))
 screen = pygame.display.set_mode(GAME_SIZE)
 
