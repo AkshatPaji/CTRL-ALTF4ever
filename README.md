@@ -22,7 +22,11 @@ so when u start the game ull be shown a boot screen ofc its an os.. then when u 
 now what if u close a bad windows +5, press ok -10, for good window -1 for closing it and +2 for oking it... ig oking is a work, clicking ok yeah better
 
 ## Screenshots
-WIP(too lazy)
+(too lazy.. uhh ill do it, its written in guide duh)
+<img width="1632" height="957" alt="image" src="https://github.com/user-attachments/assets/35aa8d87-a9d1-49ce-849d-2bed35af11c4" />
+
+<img width="1632" height="957" alt="image" src="https://github.com/user-attachments/assets/aca2e139-7bbd-455b-821d-faf0b3a8337e" />
+
 
 ## Final words
 
