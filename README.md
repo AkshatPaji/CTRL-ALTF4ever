@@ -11,14 +11,14 @@ i saw the game "windows-kill" on youtube and wnated to make it but yeah its too 
 now this is my first pygame and my first game so i have used ai to help me with debugging and do what i couldn't. rest i have taken inspiration(and copied) some of the mechanics from other games aswell as bit of code for help
 
 ### How to run
-basically u have to download the latest zip file (u can try other versions but latest is best)
-setup a virtual env and install: Pygame-ce 
-then simply run the python file.. yeah very simple
+- basically u have to download the latest zip file (u can try other versions but latest is best)
+- setup a virtual env and install: Pygame-ce 
+- then simply run the python file.. yeah very simple
 
 ### How to play 
 so when u start the game ull be shown a boot screen ofc its an os.. then when u enter the game windows will popup which u will have to close.
-but but but its not that simple u will be figuring out which one is good and which one is bad throught thier content, title, and hints on titlebar and maybe some binary hidden text. press OK on good windows and X on bad... 
-
+\n but but but its not that simple u will be figuring out which one is good and which one is bad throught thier content, title, and hints on titlebar and maybe some binary hidden text. press OK on good windows and X on bad... 
+\n \n
 now what if u close a bad windows +5, press ok -10, for good window -1 for closing it and +2 for oking it... ig oking is a work, clicking ok yeah better
 
 ## Screenshots
